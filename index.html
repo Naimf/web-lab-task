@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: lightseagreen;
+            margin-bottom: 15px;
+        }
+        
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .flexbox {
+            display: grid;
+            grid-template-columns: 400px 400px;
+            grid-template-areas: 
+                "box1 box3"
+                "box2 box3";
+            gap: 0;
+            width: 800px;
+        }
+        
+        .box {
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+        }
+        
+        .box1 {
+            grid-area: box1;
+            background-color: aqua;
+            height: auto;
+            width: 400px;
+        }
+        
+        .box2 {
+            grid-area: box2;
+            background-color: skyblue;
+            height: 150px;
+            width: 400px;
+        }
+        
+        .box3 {
+            grid-area: box3;
+            background-color: lightgreen ;
+            height: 100%;
+            width: 400px;
+        }
+        
+        .form-container {
+            display: flex;
+            flex-direction: column; 
+            gap: 8px;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px;
+        }
+        
+        .form-container label {
+            margin-bottom: 3px;
+            font-size: 15px;
+            display: block;
+            width: 320px; 
+        }
+        
+        .form-container input,
+        .form-container select {
+            padding: 8px;
+            width: 320px; 
+            box-sizing: border-box;
+            font-size: 14px;
+            margin: 0;
+        }
+        
+    
+        input[type="color"] {
+            padding: 0;
+            height: 36px; 
+        }
+        
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            width: 320px;
+        }
+        
+        .checkbox-container input {
+            width: auto;
+            margin-right: 8px;
+        }
+        
+        .submit-btn {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 320px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="circle"></div>
+        <div class="title">Registration Form</div>
+    </div>
+    
+    <div class="flexbox">
+        <div class="box box1">
+            <form>
+                <div class="form-container">
+                    <div>
+                        <label>User Full Name:</label>
+                        <input type="text" placeholder="Enter your full name" />
+                    </div>
+                    <div>
+                        <label>User Email:</label>
+                        <input type="email" placeholder="Enter your email" />
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" placeholder="Enter your password" />
+                    </div>
+                    <div>
+                        <label>Confirm Password:</label>
+                        <input type="password" placeholder="Confirm your password" />
+                    </div>
+                    <div>
+                        <label>Date of Birth:</label>
+                        <input type="date" />
+                    </div>
+                    <div>
+                        <label>Country:</label>
+                        <select>
+                            <option value="">Select Country</option>
+                            <option value="au">Australia</option>
+                            <option value="bd">Bangladesh</option>
+                            <option value="gr">Germany</option>
+                            <option value="uk">UK</option>
+                            <option value="usa">USA</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Gender:</label>
+                        <select>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="prefer-not">Prefer not to say</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Color Preference:</label>
+                        <input type="color" value="#ff0000" />
+                    </div>
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="terms" />
+                        <label for="terms">I agree to the Terms and Conditions</label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="box box2"><h1>Box 2 </h1> </div>
+        <div class="box box3"><h1>Box 3</h1> </div>
+    </div>
+</body>
+</html>
