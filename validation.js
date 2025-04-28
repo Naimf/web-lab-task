@@ -19,50 +19,71 @@ window.addEventListener('DOMContentLoaded', function() {
         let isValid = true;
 
         if (fullName === '') {
-            console.log('Invalid: Full Name is required.');
+           // console.log('Invalid: Full Name is required.');
+           alert('Invalid: Full Name is required.');
             isValid = false;
+            return;
         }
 
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
-            console.log('Invalid: Email is not valid.');
+           // console.log
+           alert('Invalid: Email is not valid.');
             isValid = false;
+            return;
         }
 
         if (password.length < 6) {
-            console.log('Invalid: Password must be at least 6 characters.');
+           // console.log
+           alert('Invalid: Password must be at least 6 characters.');
             isValid = false;
+            return;
         }
 
         if (password !== confirmPassword) {
-            console.log('Invalid: Passwords do not match.');
+            //console.log
+            alert('Invalid: Passwords do not match.');
             isValid = false;
+            return;
         }
 
         if (dob === '') {
-            console.log('Invalid: Date of Birth is required.');
+            //console.log
+            alert('Invalid: Date of Birth is required.');
             isValid = false;
+            return;
         }
 
         if (country === '') {
-            console.log('Invalid: Country must be selected.');
+           // console.log
+            alert('Invalid: Country must be selected.');
             isValid = false;
+            return;
+
         }
 
         if (gender === '') {
-            console.log('Invalid: Gender must be selected.');
+            //console.log
+            alert('Invalid: Gender must be selected.');
             isValid = false;
+            return;
         }
 
         if (!termsChecked) {
-            console.log('Invalid: You must agree to the Terms and Conditions.');
+            console.log
+            //alert('Invalid: You must agree to the Terms and Conditions.');
             isValid = false;
+            return;
         }
 
         if (isValid) {
-            console.log('Valid: Form submitted successfully!');
+            //console.log
+            alert('Valid: Form submitted successfully!');
+            return;
         } else {
-            console.log('Invalid: Please fix the errors and try again.');
+            //console.log
+            alert('Invalid: Please fix the errors and try again.');
+            return;
         }
     });
 });
